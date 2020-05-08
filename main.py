@@ -51,6 +51,14 @@ def handle_message(event):
         TextSendMessage(text=event.message.text)
     )
 
+@handler.add(MessageEvent, message=ImageMessage)
+def handle_message(event):
+	line_bot_api.reply_message(
+        event.reply_token,
+        # TextSendMessage(text='「' + event.message.text + '」って何？')
+        TextSendMessage(text='良い写真ですね')
+    )
+
 if __name__ == "__main__":
     port = int(os.getenv("PORT"))
     app.run(host="0.0.0.0", port=port)
