@@ -1,2 +1,3 @@
 # LineBot
-オウム返しbot.Python、API練習.
+オウム返しbot.Python、API練習.  
+`Herokuにてデプロイ`
